@@ -49,7 +49,8 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuario");
          <?php echo $usuario["nome_usuario"] ?>
                  </option>
          <?php } ?>
-</select>
+            </select>
+            <br>
             <button type="submit">Cadastrar</button>
         </form>
         <div>
