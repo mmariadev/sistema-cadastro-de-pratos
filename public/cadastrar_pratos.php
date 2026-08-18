@@ -1,9 +1,7 @@
 <?php
-
 include "infra/conexao.php";
-$usuario = mysqli_query($conexao, "SELECT * FROM usuario");
+$pratos = mysqli_query($conexao, "SELECT * FROM pratos");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,17 +17,7 @@ $usuario = mysqli_query($conexao, "SELECT * FROM usuario");
         <h1>CRUD - Cadastro de pratos</h1>
     </header>
     <main>
-        <h2>Adicione um novo usuario</h2>
-        <form action="public/cadastrar.php" method="POST">
-            <label for="titulo">Nome</label>
-            <input type="text" name="titulo">
-            <br>
-            <label for="autor">E-mail</label>
-            <input type="email" name="E-mail">
-            <button type="submit">Cadastrar</button>
-        </form>
-
-        <h2>Adicione um novo prato</h2>
+<h2>Adicione um novo prato</h2>
         <form action="public/cadastrar.php" method="POST">
             <label for="titulo">Nome do prato</label>
             <input type="text" name="titulo">
@@ -49,7 +37,7 @@ $usuario = mysqli_query($conexao, "SELECT * FROM usuario");
             <button type="submit">Cadastrar</button>
         </form>
         <div>
-            <h2>Livros Cadastrados</h2>
+        <h2>Livros Cadastrados</h2>
             <table>
                 <tr>
                     <th>ID</th>
