@@ -35,6 +35,7 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                 <option value="Prato principal">Prato principal</option>
                 <option value="Sobremesa">Sobremesa</option>
             </select>
+            <br>
             <button type="submit">Cadastrar</button>
         </form>
         <div>
