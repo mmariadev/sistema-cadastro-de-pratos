@@ -27,6 +27,7 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
             <br>
             <label for="autor">Preço</label>
             <input type="number" name="preco">
+            <br>
             <label for="categoria">Categoria:</label>
             <select name="categoria" id="categoria" required>
                 <option value="">Selecione uma categoria</option>
