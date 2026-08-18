@@ -1,6 +1,11 @@
 <?php
 include "../infra/conexao.php";
-$pratos = mysqli_query($conexao, "SELECT * FROM pratos");
+$pratos = mysqli_query($conexao, "
+    SELECT pratos.*, usuario.nome_usuario
+    FROM pratos
+    JOIN usuario ON pratos.usuario_id = usuario.id_usuario
+");
+$usuarios = mysqli_query($conexao, "SELECT * FROM usuario");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +41,15 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                 <option value="Sobremesa">Sobremesa</option>
             </select>
             <br>
+            <label for="usuario_id">Cadastrado por:</label>
+            <select name="usuario_id" id="usuario_id" required>
+                <option value="">Selecione um usuário</option>
+          <?php while ($usuario = mysqli_fetch_assoc($usuarios)) { ?>
+                <option value="<?php echo $usuario["id_usuario"] ?>">
+         <?php echo $usuario["nome_usuario"] ?>
+                 </option>
+         <?php } ?>
+</select>
             <button type="submit">Cadastrar</button>
         </form>
         <div>
@@ -47,6 +61,7 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                     <th>Descrição</th>
                     <th>Preço</th>
                     <th>Categoria</th>
+                    <th>Cadastrado por</th>
                 </tr>
                 <?php while ($prato = mysqli_fetch_assoc($pratos)) { ?>
                     <tr>
@@ -55,6 +70,7 @@ $pratos = mysqli_query($conexao, "SELECT * FROM pratos");
                         <td><?php echo $prato["descricao_prato"] ?></td>
                         <td><?php echo $prato["preco_pratos"] ?></td>
                         <td><?php echo $prato["categoria_pratos"] ?></td>
+                        <td><?php echo $prato["nome_usuario"] ?></td>
                         <td>
                             <a href="public/editar.php?id=<?php echo $prato["id_pratos"] ?>">Editar</a>
                             <a href="public/excluir.php?id=<?php echo $prato["id_pratos"] ?>">Excluir</a>
