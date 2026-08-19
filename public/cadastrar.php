@@ -23,7 +23,7 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuario");
     </header>
     <main>
 <h2>Adicione um novo prato</h2>
-        <form action="public/cadastrar_pratos.php" method="POST">
+        <form action="public/cadastrar.php" method="POST">
             <label for="titulo">Nome do prato</label>
             <input type="text" name="titulo">
             <br>
