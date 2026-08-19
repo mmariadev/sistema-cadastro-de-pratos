@@ -10,4 +10,4 @@ $stmt = $conexao->prepare($sql);
 $stmt->bind_param("i", $id_pratos);
 $stmt->execute();
 
-header("Location: cadastrar_pratos.php");
+header("Location: cadastrar.php");
