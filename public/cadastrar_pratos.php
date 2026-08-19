@@ -17,13 +17,13 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuario");
     <link rel="stylesheet" href="style/styles.css">
 </head>
 
-<body>
+<body class="cad>
     <header>
         <h1>CRUD - Cadastro de pratos</h1>
     </header>
     <main>
 <h2>Adicione um novo prato</h2>
-        <form action="public/cadastrar.php" method="POST">
+        <form action="public/cadastrar_pratos.php" method="POST">
             <label for="titulo">Nome do prato</label>
             <input type="text" name="titulo">
             <br>
