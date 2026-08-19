@@ -17,13 +17,13 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuario");
     <link rel="stylesheet" href="style/styles.css">
 </head>
 
-<body class="cad>
-    <header>
+<body class="cadastro_pratos">
+    <header class="header_pratos">
         <h1>CRUD - Cadastro de pratos</h1>
     </header>
-    <main>
+    <main class="main_pratos">
 <h2>Adicione um novo prato</h2>
-        <form action="public/cadastrar_pratos.php" method="POST">
+        <form class="form_pratos" action="public/cadastrar.php" method="POST">
             <label for="titulo">Nome do prato</label>
             <input type="text" name="titulo">
             <br>
@@ -53,7 +53,7 @@ $usuarios = mysqli_query($conexao, "SELECT * FROM usuario");
             <br>
             <button type="submit">Cadastrar</button>
         </form>
-        <div>
+        <div class="lista_pratos">
         <h2>Pratos Cadastrados</h2>
             <table>
                 <tr>

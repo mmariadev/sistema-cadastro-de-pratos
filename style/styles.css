@@ -84,3 +84,118 @@ table td {
 table th {
     background-color: #eaeaea;
 }
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Página: Cadastro de pratos ===== */
+.cadastro_pratos {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cadastro_pratos .header_pratos {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.cadastro_pratos .main_pratos {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.cadastro_pratos .form_pratos {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cadastro_pratos .form_pratos label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.cadastro_pratos .form_pratos input,
+.cadastro_pratos .form_pratos select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.cadastro_pratos .form_pratos button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cadastro_pratos .form_pratos button:hover {
+    background-color: #333333;
+}
+
+.cadastro_pratos .lista_pratos {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cadastro_pratos .lista_pratos table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cadastro_pratos .lista_pratos th,
+.cadastro_pratos .lista_pratos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.cadastro_pratos .lista_pratos th {
+    background-color: #eaeaea;
+}
+
+.cadastro_pratos .lista_pratos td a {
+    margin-right: 8px;
+    color: #4a4a4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cadastro_pratos .lista_pratos td a:hover {
+    text-decoration: underline;
+}
