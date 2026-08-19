@@ -15,4 +15,4 @@ CREATE TABLE pratos (
     categoria_pratos ENUM('Entrada', 'Prato principal', 'Sobremesa'),
     usuario_id INT NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuario(id_usuario)
-);
+    );
