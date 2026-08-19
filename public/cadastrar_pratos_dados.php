@@ -12,5 +12,5 @@ $stmt = $conexao->prepare($sql);
 $stmt->bind_param("ssis", $nome_pratos, $descricao_pratos, $precos_pratos, $categoria_pratos);
 $stmt->execute();
 
-header("Location: cadastrar_pratos.php");
+header("Location: cadastrar.php");
 ?>

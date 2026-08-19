@@ -14,4 +14,4 @@ $stmt->bind_param("ssdi", $nome_pratos, $descricao_pratos, $preco_pratos, $id_pr
 $stmt->execute();
 
 
-header("Location: cadastrar_pratos.php")
+header("Location: cadastrar.php")
