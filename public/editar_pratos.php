@@ -50,3 +50,13 @@ $pratos = $result->fetch_assoc();
             <br>
 
             <button type="submit">Atualizar</button>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
